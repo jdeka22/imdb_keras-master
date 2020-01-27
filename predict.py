@@ -11,7 +11,7 @@ nltk.download('punkt')
 
 config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
-set_session(tf.Session(config=config))
+set_session(tf.compat.v1.Session(config=config))
 
 INDEX_FROM=3
 word_to_id = imdb.get_word_index()
